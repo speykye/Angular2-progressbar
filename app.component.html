@@ -1,0 +1,40 @@
+<div class="outer">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="line-container">
+        <!--<ks-line-progress [options]="lineOptions"></ks-line-progress>-->
+        <progressbar *ngIf="!state" class="progress-striped acitve" value="{{value}}" type="info"></progressbar>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+        <div class="col-md-2 left-menu">
+          <div class="list-group">
+            <div class="list-group-item avatar">头像</div>
+            <a routerLink="/app-home" class="list-group-item" (click)="changeToIndex()">首页</a>
+            <a routerLink="/app-gyweb" class="list-group-item" (click)="changeTitle()">耕耘网</a>
+            <a class="list-group-item">生产平台</a>
+            <a class="list-group-item">大数据平台</a>
+            <a class="list-group-item">农资系统平台</a>
+          </div>
+        </div>
+        <div class="col-md-10 right-header">
+          <div class="col-md-6">
+            <h1>{{title}}</h1>
+          </div>
+          <div class="col-md-6">
+            <div class="btn-group">
+              <button type="button" class="btn"><img src="../assets/icons/ctrlSth.png" alt=""></button>
+              <button type="button" class="btn"><img src="../assets/icons/message.png" alt="消息" title="消息"></button>
+              <button type="button" class="btn"><img src="../assets/icons/reset.png" alt="设置" title="设置"></button>
+            </div>
+          </div> 
+        </div>
+        <div class="col-md-10 right-container">
+          <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
+    
